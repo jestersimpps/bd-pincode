@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>bd-pin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+  </head>
+  <body ng-app="example" ng-controller="exampleController as ec">
+
+    <bd-pincode ng-model="ec.pin.code" digits="{{ec.pin.digits}}" hide-digits="ec.pin.hide" hide-time="{{ec.pin.hide_time}}" valid="ec.pin.valid"></bd-pincode>
+    <bd-keypad ng-model="ec.pin.code"></bd-keypad>
+
+    <script type="text/javascript">
+      'use strict';
+
+      angular.module('example', ['bdPincode']).controller('exampleController', [
+        '$scope',
+        function ($scope) {
+          this.pin = {
+            code: '1234',
+            hide: true,
+            digits: 4,
+            hide_time: 500,
+            valid: false
+          };
+
+        }
+      ]);
+    </script>
+    <script src="../dist/bd-pincode.js"></script>
+
+  </body>
+</html>
