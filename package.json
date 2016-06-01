@@ -1,0 +1,28 @@
+{
+  "name": "bd-pincode",
+  "version": "1.0.0",
+  "description": "angular directive with auto hide of digits",
+  "main": "dist/bd-pincode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jestersimpps/bd-pincode.git"
+  },
+  "keywords": [
+    "pin",
+    "code",
+    "auto",
+    "hide"
+  ],
+  "author": "jestersimpps",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jestersimpps/bd-pincode/issues"
+  },
+  "homepage": "https://github.com/jestersimpps/bd-pincode#readme",
+  "devDependencies": {
+    "gulp-uglify": "^1.5.3"
+  }
+}
