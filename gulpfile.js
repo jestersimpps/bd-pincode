@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
-
+var watch = require('gulp-watch');
 
 gulp.task('compress', function() {
   return gulp.src('src/*.js')
@@ -9,3 +9,7 @@ gulp.task('compress', function() {
     }))
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('watch', function() {
+  gulp.watch('src/*.js', ['compress']);
+})

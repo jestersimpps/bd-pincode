@@ -3,12 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>bd-pin</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
-  </head>
-  <body ng-app="example" ng-controller="exampleController as ec">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script> -->
+    <script src="../dist/angular.js"></script>
+    <style media="screen">
+      .pincode {
+        padding: 5px;
+        margin: auto 0;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 70px;
+        height: 15px;
+      }
+      pre {
+        background: lightgrey;
+      }
 
-    <bd-pincode ng-model="ec.pin.code" digits="{{ec.pin.digits}}" hide-digits="ec.pin.hide" hide-time="{{ec.pin.hide_time}}" valid="ec.pin.valid"></bd-pincode>
-    <bd-keypad ng-model="ec.pin.code"></bd-keypad>
+    </style>
+  </head>
+  <body ng-app="example">
+
+    <div ng-controller="exampleController as ec">
+
+      <bd-pincode ng-model="ec.pin.code" digits="{{ec.pin.digits}}" hide-digits="ec.pin.hide" hide-time="{{ec.pin.hide_time}}" valid="ec.pin.valid" class="pincode"></bd-pincode>
+      <bd-keypad ng-model="ec.pin.code"></bd-keypad>
+
+      <pre>
+        {{ec.pin | json}}
+        </pre>
+      <button type="button" name="button" ng-click="ec.toggleHide()">Toggle hide</button>
+
+    </div>
 
     <script type="text/javascript">
       'use strict';
@@ -17,11 +41,15 @@
         '$scope',
         function ($scope) {
           this.pin = {
-            code: '1234',
+            code: '',
             hide: true,
             digits: 4,
             hide_time: 500,
             valid: false
+          };
+
+          this.toggleHide = function () {
+            this.pin.hide = !this.pin.hide;
           };
 
         }
