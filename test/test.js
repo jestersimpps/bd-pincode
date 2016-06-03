@@ -44,6 +44,14 @@ describe('bdpincode directive tests', function() {
     expect(el.hasClass('test')).toBeTruthy();
   });
 
+  //TODO:should have 4 digits
+  //TODO:should hide/show digits
+  //TODO:should be valid/invalid
+  //TODO:should hide after x time
+
+  //TODO:should clear ngModel
+  //TODO:should add number
+  //TODO:should delete last digit
 
 
 
