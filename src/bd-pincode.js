@@ -126,7 +126,7 @@
       template: '<table ng-keyDown="keyPress($event)">' +
         '<tr ng-repeat="row in numpad">' +
         '<td ng-repeat="number in row">' +
-        '<button id="bdKeypadBtn_{{number}}" type="button" ng-click="clickNumber(number)">{{number}}</button>' +
+        '<button type="button" ng-click="clickNumber(number)">{{number}}</button>' +
         '</td>' +
         '</tr>' +
         '</table>',
@@ -137,23 +137,22 @@
 
         //scope function called when buttons are clicked
         scope.clickNumber = function(number) {
-            //assign the transformed pincode to ngModel
-            scope.ngModel = transformPin(scope.ngModel, number);
-          }
-          // scope.keyPress = function(e) {
-          //   e.preventDefault();
-          //   var key = e.code.substr(e.code.length - 1);
-          //   console.log(key);
-          //   $timeout(function() {
-          //     switch (key) {
-          //       case 'e':
-          //         document.getElementById('bdKeypadBtn_<').click();
-          //         break;
-          //       default:
-          //         document.getElementById('bdKeypadBtn_' + key).click();
-          //     }
-          //   }, 0);
-          // }
+          //assign the transformed pincode to ngModel
+          scope.ngModel = transformPin(scope.ngModel, number);
+        }
+
+        // //on keypress, modify ngModel
+        // scope.keyPress = function(e) {
+        //   e.preventDefault();
+        //   var key = e.code.substr(e.code.length - 1);
+        //   switch (key) {
+        //     case 'e':
+        //       scope.ngModel = transformPin(scope.ngModel, '<');
+        //       break;
+        //     default:
+        //       scope.ngModel = transformPin(scope.ngModel, key);
+        //   }
+        // }
 
         //uses the input of the keypad to transform the pincode data
         //returns the transformed data
