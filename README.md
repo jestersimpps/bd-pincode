@@ -50,4 +50,4 @@ Use the class attribute on the directive.
 
 Running example in example folder
 
-!(example)[https://github.com/jestersimpps/bd-pincode/blob/master/example/bd-pincode.png]
+![example](https://github.com/jestersimpps/bd-pincode/blob/master/example/bd-pincode.png)
