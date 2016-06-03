@@ -5,7 +5,7 @@ A keypad directive that draws a simple keypad on the screen.
 
 ##Usage:
 
-###Inject `bdPincode` dependency in your angular app
+###Inject the `bdPincode` dependency in your angular app
 ```
 angular.module('example', ['bdPincode']);
 ```
@@ -44,4 +44,10 @@ angular.module('example', ['bdPincode'])
 
 ###Styling and positioning
 
-use the class attribute on the directive.
+Use the class attribute on the directive.
+
+##Example
+
+Running example in example folder
+
+!(example)[https://github.com/jestersimpps/bd-pincode/blob/master/example/bd-pincode.png]
