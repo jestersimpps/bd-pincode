@@ -60,8 +60,16 @@
         //converts a series of characters to a digit array used by this directive
         //restricts the array size to 'amount_digits'
         var toView = function(val) {
+          //return input state
+          scope.valid = validator(val);
+          //formatter logic
           return (val || '').split('').slice(0, amount_digits);
         };
+
+        //check if input has amount_digits and all are numbers
+        var validator = function(val) {
+          return val.length === amount_digits && !isNaN(parseFloat(val)) && isFinite(val);
+        }
 
         //executed every time ngModel changes
         var modelWatcher = function() {
