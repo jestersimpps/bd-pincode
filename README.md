@@ -21,7 +21,7 @@ angular.module('example', ['bdPincode']);
 </bd-pincode>
 
 <bd-keypad
-  ng-model="ec.pin.code">
+  ng-model="pin.code">
 </bd-keypad>
 ```
 
