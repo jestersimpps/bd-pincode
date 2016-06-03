@@ -25,7 +25,7 @@ angular.module('example', ['bdPincode']);
 </bd-keypad>
 ```
 
-###In your controller
+###In the controller
 ```
 angular.module('example', ['bdPincode'])
   .controller('exampleController', ['$scope',function ($scope) {

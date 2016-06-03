@@ -44,6 +44,7 @@ describe('bdpincode directive tests', function() {
     expect(el.hasClass('test')).toBeTruthy();
   });
 
+
   //TODO:should have 4 digits
   //TODO:should hide/show digits
   //TODO:should be valid/invalid
