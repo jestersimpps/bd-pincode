@@ -80,7 +80,7 @@
         //executed every time hideDigits changes
         //if hideDigits == true, convert all digits to dots
         //if hideDigits == false, leave as is
-        var hideWatcher = function() {;
+        var hideWatcher = function() {
           scope.digits = scope.hideDigits ? ngModelCtrl.$viewValue.map(function(d) {
             return "\u2022"
           }) : ngModelCtrl.$viewValue;
@@ -168,10 +168,8 @@
           switch (number) {
             case 'C':
               return '';
-              break;
             case '<':
               return pin.substring(0, pin.length - 1);
-              break;
             default:
               return (pin + number);
           }
